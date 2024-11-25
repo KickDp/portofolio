@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+<head>
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+        <ul>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="Kishore Resume.pdf">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-info">
+            <h1>DOPPA KISHORE</h1>
+            <h2>MERN Stack Developer</h2>
+            <p>Passionate about full-stack development, proficient in MongoDB, Express, React, and Node.js, seeking an entry-level role to leverage technical expertise and learn from experienced developers.</p>
+            <div class="btn-sci">
+              <a href="Kishore Resume.pdf" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="https://github.com/KickDp/" target="_blank"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kishore-d-911926283" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+                    <a href="https://youtube.com/@btech.allrounder?si=dZgFZgEQTNDLO8Ya" target="_blank"><i class="bx bxl-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="my pic.jpg" alt="Doppa Kishore">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Project 1:Calci | Counter |StopWatch | Converter </h3>
+                <p>This is was my first Beginner project</p>
+                <p>A  responsive website built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/KickDp/freeCalci" target="_blank">View on GitHub</a>
+                <div>
+                    <a href="https://kickdp.github.io/freeCalci/" target="_blank">Live Here</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Project 2: 5 days Weater forecast</h3>
+                <p>A Weather forecast application it will show the data upto 5days.</p>
+                <a href="https://github.com/KickDp/weather-forecast" target="_blank">View on GitHub</a>
+                <div>
+                    <a href="https://kickdp.github.io/weather-forecast/" target="_blank">Live here</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Project 3: Assignment submission Portal</h3>
+                <p>it is Backend application for Assignment submission</p>
+                <a href="https://github.com/KickDp/assignment-submission-portal" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Project 4: Quote Generator</h3>
+                <p>Here you will find Some inspired | motivated | happy Quotes</p>
+                <a href="https://github.com/KickDp/QuoteGenerator" target="_blank">View on GitHub</a>
+                <div>
+                <a href="https://kickdp.github.io/QuoteGenerator/" target="_blank">Live here</a>
+                </div>
+            </div>
+            <div><a href="https://github.com/KickDp/">View more on GitHub</a></div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-sec">
+      <div class="container">
+          <h2>Get in Touch!</h2>
+          <div class="contact-form">
+              <form id="form">
+                <div class="contact-form-field">
+                  <label for="contact-form-label">Your name</label>
+                  <input class="contact-form-input" type="text" name="from_name" id="from_name">
+                </div>
+                <div class="contact-form-field">
+                  <label for="contact-form-label">to_name</label>
+                  <input class="contact-form-input" type="text" name="to_name" id="to_name" placeholder="kindly enter my name">
+                </div>
+                <div class="contact-form-field">
+                  <label for="contact-form-label">message</label>
+                  <input class="contact-form-input" type="text" name="message" id="message">
+                </div>
+                <div class="contact-form-field">
+                  <label for="contact-form-label">your Email id</label>
+                  <input class="contact-form-input" type="text" name="reply_to" id="reply_to">
+                </div>
+              
+                <input class="btn btn--theme contact__btn" type="submit" id="button" value="Send Email" >
+              </form>
+              
+              <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+              
+              <script type="text/javascript">
+                emailjs.init('LHROSD1k0Lp-zm-56')
+              
+
+  const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_znwdkh3';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+</div>
+</div>
+</section>
+</body>
+</html>
